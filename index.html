@@ -1,0 +1,135 @@
+<!DOCTYPE html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Chord Hub – คอร์ดและคิวโชว์สำหรับนักดนตรี</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0B0B0C;--sf:#151517;--ln:#2a2a2e;--or:#FF7A1A;--or2:#E85F00;--tx:#F2F2F0;--mu:#9A9A9F;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:inherit}html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.7 'Noto Sans Thai',system-ui,sans-serif}
+[hidden]{display:none!important}h1,h2,h3{line-height:1.25;margin:0}p{margin:0}
+.w{max-width:1080px;margin:0 auto;padding:0 20px}.mu{color:var(--mu)}.or{color:var(--or)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border-radius:12px;border:1px solid var(--ln);background:var(--sf);color:var(--tx);font:600 16px inherit;font-family:inherit;cursor:pointer;text-decoration:none}
+.btn:hover{border-color:var(--or)}.btn.p{background:var(--or);color:#000;border-color:var(--or);font-weight:800;box-shadow:0 0 0 0 #ff7a1a55}.btn.p:hover{background:var(--or2);box-shadow:0 6px 24px #ff7a1a44}
+.btn.lg{min-height:60px;padding:0 34px;font-size:18px}.btn.sm{min-height:40px;padding:0 14px;font-size:14px}.btn.dg{color:#ff6b6b}
+input,select,textarea{width:100%;min-height:48px;padding:10px 14px;border-radius:12px;border:1px solid var(--ln);background:#0f0f10;color:var(--tx);font:16px inherit;font-family:inherit}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--or);border-color:transparent}textarea{min-height:300px;font-family:'JetBrains Mono',monospace;font-size:14px}
+label{display:block;font-size:14px;color:var(--mu);margin:14px 0 6px}
+.card{background:var(--sf);border:1px solid var(--ln);border-radius:16px;padding:22px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.logo{font-weight:800;font-size:20px;letter-spacing:-.3px}.logo b{color:var(--or)}
+nav.top{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+section.s{padding:84px 0}.eyebrow{color:var(--or);font-weight:600;font-size:14px;margin-bottom:10px}
+.hero{padding:70px 0 40px;text-align:center}.hero h1{font-size:clamp(34px,6vw,62px);font-weight:800;letter-spacing:-1px}.hero p{max-width:620px;margin:20px auto 30px;color:var(--mu);font-size:18px}
+.sf{display:flex;gap:10px;max-width:560px;margin:0 auto 22px}.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}.c{justify-content:center}
+.ico{font-size:26px;margin-bottom:10px}.card h3{font-size:18px;margin-bottom:6px}
+.mock{margin:50px auto 0;max-width:560px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:15px}.mock b{color:var(--or)}
+.steps{counter-reset:s}.steps .card::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--or);color:#000;font-weight:800;margin-bottom:12px}
+.cta{background:linear-gradient(135deg,#1b1006,#151517);border:1px solid #ff7a1a55;border-radius:24px;padding:56px 24px;text-align:center}
+footer{border-top:1px solid var(--ln);padding:30px 0;color:var(--mu);font-size:14px;text-align:center}
+.auth{max-width:420px;margin:60px auto;padding:0 20px}.err{color:#ff6b6b;font-size:14px;min-height:22px;margin-top:10px}
+.tabs{display:flex;gap:6px;background:#0f0f10;padding:5px;border-radius:12px;margin-bottom:6px}.tabs button{flex:1;min-height:42px;border:0;border-radius:9px;background:none;color:var(--mu);font:600 15px inherit;font-family:inherit;cursor:pointer}.tabs .on{background:var(--or);color:#000}
+header.app{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:#0b0b0cee;backdrop-filter:blur(8px);border-bottom:1px solid var(--ln)}
+header.app .w{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+.nv{display:flex;gap:4px}.nv button{min-height:44px;padding:0 16px;border:0;border-radius:10px;background:none;color:var(--mu);font:600 15px inherit;font-family:inherit;cursor:pointer}.nv .on{background:#2a1a0c;color:var(--or)}
+main{padding:34px 0 120px}h2.t{font-size:28px;margin-bottom:6px}.hd{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+.sg{display:flex;justify-content:space-between;gap:10px;cursor:pointer}.sg:hover{border-color:var(--or)}.tag{display:inline-block;padding:2px 10px;border-radius:99px;background:#2a1a0c;color:var(--or);font:700 13px 'JetBrains Mono',monospace}
+.bar{position:sticky;top:64px;z-index:10;background:#151517f2;border:1px solid var(--ln);border-radius:14px;padding:10px 14px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:24px}
+.bar input[type=range]{width:90px;min-height:auto;padding:0}.bar span{font-size:14px;color:var(--mu)}
+#ly{font-size:var(--fs,18px);max-width:760px}.ln{margin:2px 0;line-height:1;white-space:pre-wrap}.sgm{display:inline-flex;flex-direction:column;vertical-align:bottom;margin-top:.9em}
+.cd{color:var(--or);font:700 .85em 'JetBrains Mono',monospace;min-height:1.3em;padding-right:.4em}.tx{white-space:pre-wrap;line-height:1.6}.gap{height:.8em}
+.sec{font-size:.8em;text-transform:uppercase;letter-spacing:.5px;color:var(--mu);margin:1.6em 0 .2em;border-left:3px solid var(--or);padding-left:10px}.sec small{color:var(--or);margin-left:10px;text-transform:none;letter-spacing:0;font-size:.9em}
+.blk{padding:6px 14px;border-radius:12px;border:2px solid transparent}.blk.cur{border-color:var(--or);background:#1b1006}
+.it{display:flex;gap:8px;align-items:center;margin-bottom:10px}.it .nm{flex:1}.q{border-left:4px solid var(--or)}
+.full{position:fixed;inset:0;background:var(--bg);z-index:50;display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.full .top{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;border-bottom:1px solid var(--ln);gap:10px}.full .bd{flex:1;overflow:auto;padding:20px}
+.full .ft{display:grid;grid-template-columns:1fr 2fr;gap:12px;padding:14px 20px}.full .ft .btn{min-height:76px;font-size:22px}
+.big{font-size:clamp(28px,7vw,64px);font-weight:800;line-height:1.2}.cuebox{border:2px solid var(--or);background:#1b1006;border-radius:20px;padding:24px;margin:18px 0}.cuebox .big{color:var(--or)}
+.lbl{font-size:14px;color:var(--mu);margin-bottom:4px}
+@media(max-width:720px){.nv{position:fixed;left:0;right:0;bottom:0;background:#0b0b0cf5;border-top:1px solid var(--ln);justify-content:space-around;padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px));z-index:30}.nv button{flex:1;min-height:52px}section.s{padding:56px 0}.sf{flex-direction:column}}
+</style></head><body>
+
+<div id="land">
+<div class="w"><nav class="top"><div class="logo">Chord<b>Hub</b></div><div class="row"><button class="btn sm" onclick="showAuth('in')">เข้าสู่ระบบ</button><button class="btn p sm" onclick="showAuth('up')">เริ่มใช้งานฟรี</button></div></nav></div>
+<div class="w hero"><div class="eyebrow">สำหรับนักดนตรีและศิลปิน</div><h1>คอร์ดครบ คิวชัด<br><span class="or">โชว์ไม่สะดุด</span></h1><p>ดูคอร์ด เปลี่ยนคีย์ จัดเซ็ตลิสต์ และรันคิวโชว์ให้นักดนตรีกับแดนเซอร์เห็นจังหวะเดียวกัน ในเว็บเดียว</p>
+<form class="sf" onsubmit="landSearch(event)"><input id="lq" placeholder="ค้นหาชื่อเพลงหรือชื่อศิลปิน" aria-label="ค้นหา"><button class="btn p">ค้นหา</button></form>
+<div class="row c"><button class="btn p lg" onclick="showAuth('up')">สร้างบัญชีและเริ่มเลย</button><a class="btn lg" href="#feat">ดูฟีเจอร์ทั้งหมด</a></div>
+<div class="card mock"><div class="mu" style="font-size:12px">ใต้แสงไฟเวที · คีย์ G</div><div><b>G</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>D</b></div><div>ร้องไปด้วยกัน ให้ดังทั่วฟ้า</div><div class="or" style="font-size:13px;margin-top:8px">▶ คิวแดนเซอร์: ทุกคนออกเต้น</div></div></div>
+<section class="s" id="feat"><div class="w"><div class="eyebrow">ฟีเจอร์</div><h2 class="t" style="margin-bottom:26px">ทุกอย่างที่นักดนตรีมืออาชีพต้องใช้</h2><div class="grid">
+<div class="card"><div class="ico">🎼</div><h3>เพิ่ม–ลดคีย์</h3><p class="mu">เปลี่ยนคีย์ในหน้าเพลงได้ทันที คอร์ดเปลี่ยนตามอัตโนมัติ</p></div>
+<div class="card"><div class="ico">📜</div><h3>เลื่อนอัตโนมัติ</h3><p class="mu">ปรับความเร็วได้ ไม่ต้องละมือจากเครื่องดนตรี</p></div>
+<div class="card"><div class="ico">✏️</div><h3>แก้ไขคอร์ดและเนื้อเพลง</h3><p class="mu">พิมพ์คอร์ดในวงเล็บเหลี่ยม พร้อมพรีวิวสดทันที</p></div>
+<div class="card"><div class="ico">📚</div><h3>คลังเพลงและเซ็ตลิสต์</h3><p class="mu">จัดเพลงเป็นรายการของแต่ละงาน และแทรกช่องคิวระหว่างเพลงได้เอง</p></div>
+<div class="card"><div class="ico">🎤</div><h3>โหมดคอนเสิร์ต</h3><p class="mu">เต็มจอ ตัวใหญ่ ปุ่มใหญ่ กดถัดไปได้แม่นแม้อยู่บนเวที</p></div>
+<div class="card"><div class="ico">💃</div><h3>มุมมองแดนเซอร์</h3><p class="mu">เห็นว่าถึงท่อนไหน และต้องออกตรงไหน</p></div></div></div></section>
+<section class="s"><div class="w"><div class="eyebrow">วิธีใช้งาน</div><h2 class="t" style="margin-bottom:26px">เริ่มได้ใน 3 ขั้นตอน</h2><div class="grid steps"><div class="card"><h3>เพิ่มเพลง</h3><p class="mu">พิมพ์เนื้อและคอร์ดของเพลงลงในคลังของคุณ</p></div><div class="card"><h3>จัดเซ็ตลิสต์</h3><p class="mu">เรียงเพลง แทรกคิว MC หรือช่วงเปลี่ยนชุด</p></div><div class="card"><h3>รันโชว์</h3><p class="mu">เปิดโหมดคอนเสิร์ต แล้วกดไปทีละท่อน</p></div></div></div></section>
+<section class="s"><div class="w"><div class="eyebrow">เหมาะกับใคร</div><h2 class="t" style="margin-bottom:26px">ทุกคนที่ขึ้นแสดง</h2><div class="grid"><div class="card"><h3>วงดนตรี</h3><p class="mu">ทุกคนเห็นคอร์ดและลำดับเพลงเดียวกัน</p></div><div class="card"><h3>ศิลปินเดี่ยว</h3><p class="mu">จัดเซ็ตลิสต์แยกตามงานได้ไม่จำกัด</p></div><div class="card"><h3>ทีมโชว์และแดนเซอร์</h3><p class="mu">รู้คิวเข้า–ออกโดยไม่ต้องจำ</p></div><div class="card"><h3>ครูสอนดนตรี</h3><p class="mu">เก็บเพลงและเปลี่ยนคีย์ให้เหมาะกับนักเรียน</p></div></div></div></section>
+<div class="w"><div class="cta"><h2 style="font-size:32px;margin-bottom:12px">พร้อมขึ้นเวทีแล้วหรือยัง</h2><p class="mu" style="margin-bottom:26px">สร้างบัญชีฟรี แล้วเพิ่มเพลงแรกของคุณวันนี้</p><button class="btn p lg" onclick="showAuth('up')">เริ่มใช้งานฟรี</button></div></div>
+<footer style="margin-top:80px"><div class="w">© 2026 Chord Hub · ติดต่อ hello@chordhub.example</div></footer></div>
+
+<div id="authv" hidden><div class="auth"><div class="logo" style="text-align:center;margin-bottom:24px;cursor:pointer" onclick="showLand()">Chord<b>Hub</b></div><div class="card"><div class="tabs"><button id="ti" onclick="authMode('in')">เข้าสู่ระบบ</button><button id="tu" onclick="authMode('up')">สมัครสมาชิก</button></div>
+<form onsubmit="doAuth(event)"><div id="nmw"><label>ชื่อที่แสดง</label><input name="nm" autocomplete="name"></div><label>อีเมล</label><input name="em" type="email" required autocomplete="email"><label>รหัสผ่าน</label><input name="pw" type="password" required autocomplete="current-password"><div class="err" id="err"></div><button class="btn p lg" style="width:100%;margin-top:8px" id="sb">เข้าสู่ระบบ</button></form>
+<p class="mu" style="font-size:13px;margin-top:16px">หมายเหตุ: ระบบบัญชีนี้เป็นแบบจำลอง เก็บข้อมูลไว้ในเบราว์เซอร์เครื่องนี้เท่านั้น แต่ละบัญชีเห็นเฉพาะเพลงและเพลย์ลิสต์ของตัวเอง</p></div></div></div>
+
+<div id="app" hidden><header class="app"><div class="w"><div class="logo">Chord<b>Hub</b></div><div class="nv"><button data-v="lib" onclick="go('lib')">คลังเพลง</button><button data-v="sets" onclick="go('sets')">เซ็ตลิสต์</button><button data-v="live" onclick="go('live')">Live Session</button></div><div class="row"><span class="mu" id="un" style="font-size:14px"></span><button class="btn sm" onclick="logout()">ออก</button></div></div></header><main><div class="w" id="main"></div></main></div>
+<div id="fs" class="full" hidden></div>
+
+<script>
+const mem={},ls={get(k,d){try{const v=localStorage.getItem(k);if(v!==null)return JSON.parse(v)}catch(e){}return k in mem?mem[k]:d},set(k,v){mem[k]=v;try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const $=s=>document.querySelector(s),uid=()=>Math.random().toString(36).slice(2,9);
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let users=ls.get('ch_u',{}),me=ls.get('ch_me',null),songs=[],lists=[],view='lib',cur=null,q='',mode='in',tr=0,fs=18,sp=2,timer=null,live=null,wl=null,del=0,pend='';
+const sv=()=>{ls.set('ch_s_'+me.id,songs);ls.set('ch_l_'+me.id,lists)},hash=p=>btoa(unescape(encodeURIComponent(p)));
+const S=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'],B=['C','Db','D','Eb','E','F','Gb','G','Ab','A','Bb','B'],FL={Db:1,Eb:3,Gb:6,Ab:8,Bb:10};
+const ix=n=>n in FL?FL[n]:S.indexOf(n);
+function tp(c,k,flat){return k?c.replace(/[A-G][#b]?/g,m=>{const i=ix(m);return i<0?m:(flat?B:S)[(i+k+120)%12]}):c}
+const isFlat=k=>/^(F|[A-G]b)/.test(k||'');
+function parse(b){const o=[];let n=-1;String(b).split('\n').forEach(l=>{const m=l.match(/^#\s*([^|]*)\|?\s*(.*)$/);if(m){n++;o.push({h:1,n,name:m[1].trim(),cue:m[2].trim()})}else o.push({l})});return o}
+function lyr(s,k,hi){const f=isFlat(s.key);let h='<section class="blk" id="b-1">';let n=-1;parse(s.body).forEach(b=>{if(b.h){n++;h+='</section><section class="blk'+(n===hi?' cur':'')+'" id="b'+n+'"><h3 class="sec">'+esc(b.name)+(b.cue?'<small>▶ '+esc(b.cue)+'</small>':'')+'</h3>'}else if(!b.l.trim())h+='<div class="gap"></div>';else{h+='<div class="ln">';b.l.split(/(\[[^\]]+\])/).reduce((a,p)=>{if(/^\[.*\]$/.test(p)){a.c=tp(p.slice(1,-1),k,f);return a}if(p||a.c){h+='<span class="sgm"><span class="cd">'+esc(a.c||'')+'&nbsp;</span><span class="tx">'+esc(p)+'</span></span>';a.c=''}return a},{c:''});h+='</div>'}});return h+'</section>'}
+function seed(){const a=uid(),b=uid(),c=uid();return{s:[{id:a,title:'ใต้แสงไฟเวที',artist:'วงตัวอย่าง',key:'G',bpm:96,body:'# Intro\n[G] [D] [Em] [C]\n# Verse 1 | แดนเซอร์ชุด A เตรียมเข้าเวที\n[G]ฉันยืนอยู่ตรงนี้ [D]ใต้แสงไฟสีส้ม\n[Em]ทุกเสียงที่ดังก้อง [C]เรียกให้ใจเต้นแรง\n# Chorus | แดนเซอร์ทุกคนออกเต้น\n[G]ร้องไปด้วยกัน [D]ให้ดังทั่วฟ้า\n[Em]คืนนี้เป็นของเรา [C]ไม่มีใครหยุดได้\n# Outro | แดนเซอร์ออกข้างเวที\n[G] [D] [C] [G]'},{id:b,title:'ถนนสายเดิม',artist:'ศิลปินตัวอย่าง',key:'C',bpm:78,body:'# Verse\n[C]เดินบนถนนสายเดิม [Am]กลิ่นฝนยังจำได้\n[F]เธอไม่อยู่ตรงนี้ [G]แต่ใจยังอยู่ไม่ไป\n# Chorus | แดนเซอร์ชุด B เข้า\n[F]ถนนสายเดิม [G]พาฉันกลับมา\n[C]ถึงเธอไม่อยู่ [Am]ฉันก็ยังรอ'},{id:c,title:'ฝันกลางเมือง',artist:'วงตัวอย่าง',key:'Am',bpm:110,body:'# Verse\n[Am]ไฟในเมืองสว่าง [F]แต่ฝันฉันไกลกว่า\n[C]ก้าวไปทีละก้าว [G]จนถึงฟ้าที่ฝัน'}],l:[{id:uid(),name:'โชว์ทดลอง',items:[{k:'s',id:a},{k:'q',t:'MC ทักทายคนดู (30 วินาที)'},{k:'s',id:b},{k:'q',t:'เปลี่ยนชุดแดนเซอร์'},{k:'s',id:c}]}]}}
+function showLand(){$('#land').hidden=0;$('#authv').hidden=1;$('#app').hidden=1;scrollTo(0,0)}
+function showAuth(m){$('#land').hidden=1;$('#authv').hidden=0;authMode(m)}
+function authMode(m){mode=m;$('#ti').className=m=='in'?'on':'';$('#tu').className=m=='up'?'on':'';$('#nmw').hidden=m=='in';$('#sb').textContent=m=='in'?'เข้าสู่ระบบ':'สร้างบัญชี';$('#err').textContent=''}
+function landSearch(e){e.preventDefault();pend=$('#lq').value.trim();me?enter():showAuth('up')}
+function doAuth(e){e.preventDefault();const f=e.target,em=f.em.value.trim().toLowerCase(),pw=hash(f.pw.value),er=t=>{$('#err').textContent=t};let u=users[em];
+if(mode=='up'){if(u)return er('อีเมลนี้มีบัญชีอยู่แล้ว');if(f.pw.value.length<6)return er('รหัสผ่านต้องมีอย่างน้อย 6 ตัวอักษร');u=users[em]={id:uid(),email:em,pw,name:f.nm.value.trim()||em.split('@')[0]};ls.set('ch_u',users);const d=seed();ls.set('ch_s_'+u.id,d.s);ls.set('ch_l_'+u.id,d.l)}
+else if(!u||u.pw!=pw)return er('อีเมลหรือรหัสผ่านไม่ถูกต้อง');
+me={id:u.id,name:u.name};ls.set('ch_me',me);f.reset();enter()}
+function enter(){songs=ls.get('ch_s_'+me.id,[]);lists=ls.get('ch_l_'+me.id,[]);q=pend;pend='';$('#land').hidden=1;$('#authv').hidden=1;$('#app').hidden=0;$('#un').textContent=me.name;go('lib')}
+function logout(){me=null;ls.set('ch_me',null);live=null;showLand()}
+function go(v,id){clearInterval(timer);timer=null;view=v;cur=id||null;del=0;$('#fs').hidden=1;document.querySelectorAll('.nv button').forEach(b=>b.className=b.dataset.v==(v=='song'||v=='edit'?'lib':v=='setedit'?'sets':v)?'on':'');R[v]();if(v!='live')scrollTo(0,0)}
+const sg=id=>songs.find(s=>s.id==id),M=html=>{$('#main').innerHTML=html};
+const R={
+lib(){const t=q.toLowerCase(),L=songs.filter(s=>(s.title+' '+s.artist).toLowerCase().includes(t));M(`<div class="hd"><div><h2 class="t">คลังเพลง</h2><p class="mu">เพลงทั้งหมดของคุณ ${songs.length} เพลง</p></div><button class="btn p lg" onclick="go('edit','new')">+ เพิ่มเพลงใหม่</button></div><input id="sq" placeholder="ค้นหาด้วยชื่อเพลงหรือชื่อศิลปิน" value="${esc(q)}" oninput="q=this.value;libList()" style="margin-bottom:22px"><div class="grid" id="lg"></div>`);libList()},
+song(){const s=sg(cur);M(`<div class="hd"><div><h2 class="t">${esc(s.title)}</h2><p class="mu">${esc(s.artist)} · ${s.bpm||'-'} BPM</p></div><div class="row"><button class="btn sm" onclick="go('lib')">← คลังเพลง</button><button class="btn sm" onclick="go('edit','${s.id}')">แก้ไข</button></div></div>
+<div class="bar"><span>คีย์</span><button class="btn sm" onclick="tk(-1)">−</button><span class="tag" id="kd"></span><button class="btn sm" onclick="tk(1)">+</button><span>ขนาด</span><button class="btn sm" onclick="fz(-2)">A−</button><button class="btn sm" onclick="fz(2)">A+</button><button class="btn p sm" id="ab" onclick="au()">▶ เลื่อนอัตโนมัติ</button><input type="range" min="1" max="6" value="${sp}" oninput="sp=+this.value" aria-label="ความเร็ว"></div><div id="ly"></div>`);sh()},
+edit(){const n=cur=='new',s=n?{title:'',artist:'',key:'C',bpm:100,body:'# Verse 1\n[C]พิมพ์เนื้อเพลงตรงนี้ [G]ใส่คอร์ดในวงเล็บเหลี่ยม\n# Chorus | คิวสำหรับแดนเซอร์ (ไม่บังคับ)\n[F]ท่อนฮุคอยู่ตรงนี้ [C]แล้วต่อด้วยเนื้อเพลง'}:sg(cur);
+M(`<div class="hd"><h2 class="t">${n?'เพิ่มเพลงใหม่':'แก้ไขเพลง'}</h2><button class="btn sm" onclick="${n?"go('lib')":"go('song','"+cur+"')"}">ยกเลิก</button></div><div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));align-items:start"><form class="card" onsubmit="saveS(event)"><label>ชื่อเพลง</label><input name="t" required value="${esc(s.title)}"><label>ศิลปิน</label><input name="a" value="${esc(s.artist)}"><div class="row"><div style="flex:1"><label>คีย์</label><input name="k" value="${esc(s.key)}"></div><div style="flex:1"><label>BPM</label><input name="b" type="number" value="${esc(s.bpm)}"></div></div><label>เนื้อเพลงและคอร์ด</label><textarea name="body" oninput="pv(this.form)">${esc(s.body)}</textarea><p class="mu" style="font-size:13px;margin-top:8px">ใส่คอร์ดแบบ [G] ก่อนคำที่ต้องการ · ขึ้นบรรทัดด้วย # ชื่อท่อน | คิว เพื่อแบ่งท่อนและตั้งคิวแดนเซอร์</p><div class="row" style="margin-top:16px"><button class="btn p lg">บันทึก</button>${n?'':'<button type="button" class="btn dg" id="db" onclick="delS()">ลบเพลง</button>'}</div></form><div class="card"><div class="lbl">พรีวิว</div><div id="ly"></div></div></div>`);pv($('#main form'))},
+sets(){M(`<div class="hd"><div><h2 class="t">เซ็ตลิสต์</h2><p class="mu">รายการเพลงสำหรับแต่ละงาน</p></div><button class="btn p lg" onclick="newL()">+ สร้างเซ็ตลิสต์</button></div><div class="grid">${lists.map(l=>`<div class="card sg" onclick="go('setedit','${l.id}')"><div><h3>${esc(l.name)}</h3><p class="mu">${l.items.filter(i=>i.k=='s').length} เพลง · ${l.items.filter(i=>i.k=='q').length} คิว</p></div><span class="or">แก้ไข ›</span></div>`).join('')||'<p class="mu">ยังไม่มีเซ็ตลิสต์ กดปุ่มสร้างได้เลย</p>'}</div>`)},
+setedit(){const l=lists.find(x=>x.id==cur);M(`<div class="hd"><div style="flex:1"><label style="margin:0 0 6px">ชื่อเซ็ตลิสต์</label><input value="${esc(l.name)}" oninput="lists.find(x=>x.id==cur).name=this.value;sv()"></div><div class="row"><button class="btn sm" onclick="go('sets')">← กลับ</button><button class="btn p" onclick="startLive('${l.id}')">▶ เริ่ม Live</button></div></div>
+${l.items.map((it,i)=>{const s=it.k=='s'?sg(it.id):null;return`<div class="it card ${it.k=='q'?'q':''}" style="padding:12px 14px"><span class="tag">${i+1}</span><div class="nm">${it.k=='s'?(s?esc(s.title)+' <span class="mu">· '+esc(s.artist)+'</span>':'<span class="mu">(เพลงถูกลบแล้ว)</span>'):`<input value="${esc(it.t)}" placeholder="ข้อความคิว" oninput="lists.find(x=>x.id==cur).items[${i}].t=this.value;sv()">`}</div><button class="btn sm" onclick="mv(${i},-1)" aria-label="ขึ้น">↑</button><button class="btn sm" onclick="mv(${i},1)" aria-label="ลง">↓</button><button class="btn sm dg" onclick="rmI(${i})" aria-label="ลบ">✕</button></div>`}).join('')}
+<div class="card" style="margin-top:20px"><div class="row"><select id="as" style="flex:1;min-width:200px">${songs.map(s=>`<option value="${s.id}">${esc(s.title)} – ${esc(s.artist)}</option>`).join('')}</select><button class="btn" onclick="addI('s')">+ เพิ่มเพลง</button><button class="btn" onclick="addI('q')">+ เพิ่มช่องคิว</button></div></div>`)},
+live(){if(!live){M(`<div class="hd"><div><h2 class="t">Live Session</h2><p class="mu">เลือกเซ็ตลิสต์เพื่อเริ่มโชว์ หรือเปิดมุมมองแดนเซอร์</p></div><button class="btn lg" onclick="openCue()">💃 มุมมองแดนเซอร์</button></div><div class="grid">${lists.map(l=>`<div class="card"><h3>${esc(l.name)}</h3><p class="mu" style="margin:6px 0 16px">${l.items.length} รายการ</p><button class="btn p" onclick="startLive('${l.id}')">▶ เริ่มโชว์</button></div>`).join('')||'<p class="mu">สร้างเซ็ตลิสต์ก่อนเริ่มโชว์</p>'}</div>`);return}
+const l=lists.find(x=>x.id==live.l),T=steps(l),p=T[live.i],nx=T[live.i+1];$('#fs').hidden=0;
+$('#fs').innerHTML=`<div class="top"><div><div class="lbl">ขั้นที่ ${live.i+1} / ${T.length}</div><b>${esc(l.name)}</b></div><div class="row"><button class="btn sm" onclick="openCue()">💃 แดนเซอร์</button><button class="btn sm dg" onclick="endLive()">จบโชว์</button></div></div><div class="bd" id="bd">${p.q?`<div class="lbl">คิวพิเศษ</div><div class="cuebox"><div class="big">${esc(p.q)}</div></div>`:`<h2 class="big">${esc(p.s.title)}</h2><p class="mu">${esc(p.s.artist)} · คีย์ ${esc(p.s.key)}${p.name?' · ท่อน '+esc(p.name):''}</p>${p.cue?`<div class="cuebox"><div class="lbl">คิว</div><div class="big">${esc(p.cue)}</div></div>`:''}<div id="ly" style="--fs:26px;margin-top:20px">${lyr(p.s,0,p.n)}</div>`}</div><div class="ft"><button class="btn" onclick="stp(-1)" ${live.i?'':'disabled'}>◀ ก่อนหน้า</button><button class="btn p" onclick="stp(1)" ${nx?'':'disabled'}>${nx?'ถัดไป ▶':'จบเซ็ตลิสต์'}</button></div>`;
+const c=$('#b'+p.n);c&&c.scrollIntoView({block:'center'});pub(T)},
+cue(){$('#fs').hidden=0;timer=setInterval(cv,500);cv()}};
+function libList(){const t=q.toLowerCase(),L=songs.filter(s=>(s.title+' '+s.artist).toLowerCase().includes(t));$('#lg').innerHTML=L.map(s=>`<div class="card sg" onclick="go('song','${s.id}')"><div><h3>${esc(s.title)}</h3><p class="mu">${esc(s.artist)}</p></div><span class="tag" style="align-self:flex-start">${esc(s.key)}</span></div>`).join('')||'<p class="mu">ไม่พบเพลงที่ค้นหา ลองเพิ่มเพลงใหม่ได้เลย</p>'}
+function sh(){const s=sg(cur);$('#kd').textContent=tp(s.key,tr,isFlat(s.key));$('#ly').style.setProperty('--fs',fs+'px');$('#ly').innerHTML=lyr(s,tr)}
+function tk(d){tr=(tr+d+12)%12;sh()}function fz(d){fs=Math.max(12,Math.min(40,fs+d));sh()}
+function au(){if(timer){clearInterval(timer);timer=null}else timer=setInterval(()=>scrollBy(0,sp),40);$('#ab').textContent=timer?'⏸ หยุด':'▶ เลื่อนอัตโนมัติ'}
+function pv(f){$('#ly').innerHTML=lyr({key:f.k.value,body:f.body.value},0,-9)}
+function saveS(e){e.preventDefault();const f=e.target,d={title:f.t.value.trim(),artist:f.a.value.trim(),key:f.k.value.trim()||'C',bpm:f.b.value,body:f.body.value};if(cur=='new'){d.id=uid();songs.unshift(d);cur=d.id}else Object.assign(sg(cur),d);sv();tr=0;go('song',cur)}
+function delS(){if(!del){del=1;$('#db').textContent='กดอีกครั้งเพื่อยืนยันลบ';return}songs=songs.filter(s=>s.id!=cur);lists.forEach(l=>l.items=l.items.filter(i=>i.id!=cur));sv();go('lib')}
+function newL(){const l={id:uid(),name:'เซ็ตลิสต์ใหม่',items:[]};lists.unshift(l);sv();go('setedit',l.id)}
+const LI=()=>lists.find(x=>x.id==cur);
+function mv(i,d){const a=LI().items,j=i+d;if(j<0||j>=a.length)return;[a[i],a[j]]=[a[j],a[i]];sv();R.setedit()}
+function rmI(i){LI().items.splice(i,1);sv();R.setedit()}
+function addI(k){const l=LI();if(k=='s'){const v=$('#as').value;if(!v)return;l.items.push({k:'s',id:v})}else l.items.push({k:'q',t:'คิวใหม่: พิมพ์รายละเอียดที่นี่'});sv();R.setedit()}
+function steps(l){const r=[];l.items.forEach(it=>{if(it.k=='q')r.push({q:it.t});else{const s=sg(it.id);if(!s)return;const h=parse(s.body).filter(b=>b.h);h.length?h.forEach(b=>r.push({s,n:b.n,name:b.name,cue:b.cue})):r.push({s,n:-1})}});return r.length?r:[{q:'เซ็ตลิสต์ยังว่างอยู่'}]}
+function startLive(id){live={l:id,i:0};try{navigator.wakeLock&&navigator.wakeLock.request('screen').then(w=>wl=w).catch(()=>{})}catch(e){}go('live')}
+function stp(d){const T=steps(lists.find(x=>x.id==live.l)),n=live.i+d;if(n<0||n>=T.length)return;live.i=n;R.live()}
+function endLive(){live=null;ls.set('ch_live_'+me.id,null);try{wl&&wl.release()}catch(e){}go('live')}
+function pub(T){const f=x=>x?{t:x.q?'คิวพิเศษ':x.s.title,sec:x.q?x.q:x.name||'',cue:x.cue||''}:null;ls.set('ch_live_'+me.id,{c:f(T[live.i]),n:f(T[live.i+1]),at:Date.now()})}
+function openCue(){go('cue')}
+function cv(){const d=ls.get('ch_live_'+me.id,null);$('#fs').innerHTML=`<div class="top"><b>มุมมองแดนเซอร์</b><button class="btn sm" onclick="go('live')">ปิด</button></div><div class="bd">${d&&d.c?`<div class="lbl">ตอนนี้</div><div class="big">${esc(d.c.t)}</div><p class="mu" style="font-size:22px">${esc(d.c.sec)}</p>${d.c.cue?`<div class="cuebox"><div class="lbl">คิวของคุณ</div><div class="big">${esc(d.c.cue)}</div></div>`:''}${d.n?`<div class="card" style="margin-top:24px"><div class="lbl">ถัดไป</div><div style="font-size:24px;font-weight:600">${esc(d.n.t)}${d.n.sec?' · '+esc(d.n.sec):''}</div>${d.n.cue?`<div class="or" style="font-size:22px;margin-top:8px">เตรียมตัว: ${esc(d.n.cue)}</div>`:''}</div>`:''}`:'<p class="mu" style="font-size:20px">ยังไม่มีโชว์ที่กำลังรัน เปิดโหมดคอนเสิร์ตในหน้าต่างอื่นของเบราว์เซอร์เดียวกัน แล้วคิวจะแสดงที่นี่</p>'}</div>`}
+document.addEventListener('keydown',e=>{if(view!='live'||!live||/INPUT|TEXTAREA/.test(e.target.tagName))return;if(e.key=='ArrowRight'||e.key==' '){e.preventDefault();stp(1)}if(e.key=='ArrowLeft')stp(-1)});
+me&&users&&(songs=ls.get('ch_s_'+me.id,[]),lists=ls.get('ch_l_'+me.id,[]),enter());
+</script></body></html>
